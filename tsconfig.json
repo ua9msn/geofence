@@ -1,0 +1,25 @@
+{
+    "include": ["./src"],
+    "exclude": ["node_modules", "dist"],
+    "compilerOptions": {
+        "outDir": "dist",
+        "module": "esnext",
+        "target": "es6",
+        "sourceMap": true,
+        "allowJs": false,
+        "jsx": "react",
+        "declaration": true,
+        "moduleResolution": "node",
+        "forceConsistentCasingInFileNames": true,
+        "noImplicitReturns": true,
+        "suppressImplicitAnyIndexErrors": true,
+        "noUnusedLocals": false,
+        "noUnusedParameters": false,
+        "skipLibCheck": true,
+        "esModuleInterop": true,
+        "allowSyntheticDefaultImports": true,
+        "strict": true,
+        "resolveJsonModule": true,
+        "noEmit": false
+    }
+}
