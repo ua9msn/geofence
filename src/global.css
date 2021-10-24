@@ -1,0 +1,14 @@
+div {
+    box-sizing: border-box;
+}
+
+input:invalid {
+    border: 1px solid var(--error-border);
+}
+
+:root {
+    --main-bg-color: #1976d2;
+    --error-border: red;
+    --normal-border: lightgrey;
+    --row-hghlight: lightblue;
+}

@@ -18,6 +18,11 @@ declare module '*.mod.scss' {
     export default styles;
 }
 
+declare module '*.css' {
+    const styles: {[key: string]: string};
+    export default styles;
+}
+
 declare namespace NodeJS {
     export interface ProcessEnv {
         ENDPOINT: string;

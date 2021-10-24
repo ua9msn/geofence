@@ -4,6 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const Dotenv = require('dotenv-webpack');
+const config = require('./src/config.json');
 
 const isProduction = process.env.NODE_ENV !== 'development';
 const styleHandler = isProduction ? MiniCssExtractPlugin.loader : 'style-loader';
@@ -34,7 +35,7 @@ module.exports = {
             ],
         }),
         new HtmlWebpackPlugin({
-            title: 'Черномор Трансфер',
+            title: config.site.name,
             template: './src/template.html',
             filename: 'index.html',
             scriptLoading: 'defer',
@@ -89,15 +90,11 @@ module.exports = {
                 },
             },
             {
-                test: /\.(png|jpg|jpeg|gif|ico|webp)$/i,
+                test: /\.(svg|png|jpg|jpeg|gif|ico|webp)$/i,
                 type: 'asset/resource',
                 generator: {
                     filename: 'img/[name].[hash][ext]',
                 },
-            },
-            {
-                test: /\.svg$/,
-                use: ['@svgr/webpack'],
             }
         ],
     },
@@ -105,7 +102,7 @@ module.exports = {
         historyApiFallback: true,
         open: false,
         compress: true,
-        hot: false,
+        hot: true,
         port: 9000,
         host: '0.0.0.0',
         http2: false, //не работет с последней нодой.

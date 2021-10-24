@@ -1,0 +1,10 @@
+@import '../mixins';
+
+.H {
+    @include inherit_text;
+    text-transform: uppercase;
+}
+
+.A {
+    @include inherit_text;
+}

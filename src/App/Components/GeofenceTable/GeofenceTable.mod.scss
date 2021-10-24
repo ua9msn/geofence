@@ -1,0 +1,32 @@
+@import '../../../global.css';
+
+.geofencesTable {
+    border-collapse: collapse;
+    border: 1px solid var(--normal-border);
+    width: 100%;
+    box-sizing: border-box;
+    table-layout: fixed;
+
+    .tr {
+        background: none;
+    }
+    .tr-highlight {
+        background: var(--row-hghlight);
+    }
+
+    .th {
+        text-align: start;
+        padding: 0.25em;
+        border: 1px solid var(--normal-border);
+    }
+
+    .td {
+        border: 1px solid var(--normal-border);
+        height: 2em;
+        padding: 0.25em;
+    }
+    .nameInput {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}

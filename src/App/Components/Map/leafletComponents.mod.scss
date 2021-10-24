@@ -1,0 +1,15 @@
+.whereAmIKnob {
+    position: absolute;
+    right: 0;
+    top: 20%;
+    z-index: 1000;
+    margin-right: 10px;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    .button {
+        border: none;
+        width: 2.5em;
+        height: 2.5em;
+        display: block;
+    }
+}

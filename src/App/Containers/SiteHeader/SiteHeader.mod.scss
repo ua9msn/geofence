@@ -1,0 +1,12 @@
+@import '../../mixins';
+
+.header {
+    background: var(--main-bg-color, red);
+    width: 100%;
+    display: flex;
+    padding: 1em;
+    font-size: 2em;
+    color: white;
+    align-items: center;
+    justify-content: space-between;
+}
