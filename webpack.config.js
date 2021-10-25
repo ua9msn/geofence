@@ -11,7 +11,7 @@ const styleHandler = isProduction ? MiniCssExtractPlugin.loader : 'style-loader'
 
 module.exports = {
     mode: isProduction ? 'production' : 'development',
-    devtool: isProduction ? 'source-map' : 'eval-source-map',
+    devtool: isProduction ? false : 'eval-source-map',
     entry: {
         index: './src/index.tsx',
     },
@@ -39,11 +39,11 @@ module.exports = {
             template: './src/template.html',
             filename: 'index.html',
             scriptLoading: 'defer',
-            hash: true,
+            hash: true
         }),
         new MiniCssExtractPlugin({
-            filename: 'css/[name].[hash].css',
-            chunkFilename: 'css/[name].[hash].css',
+            filename: 'css/[name].[chunkhash].css',
+            chunkFilename: 'css/[name].[chunkhash].css',
         }),
         new Dotenv({
             ignoreStub: true,
@@ -97,6 +97,14 @@ module.exports = {
                 },
             }
         ],
+    },
+    optimization: {
+        chunkIds: 'named',
+        mergeDuplicateChunks: true,
+        moduleIds: 'named',
+        splitChunks: {
+            chunks: 'all'
+        }
     },
     devServer: {
         historyApiFallback: true,

@@ -8,7 +8,7 @@
         "build": "NODE_ENV=production webpack",
         "analyse": "NODE_ENV=production webpack --json > stats.json",
         "clean": "rimraf dist",
-        "clean:build": "npm run clean & npm run build",
+        "clean:build": "yarn run clean & yarn run build",
         "test": "echo not implemented yet"
     },
     "dependencies": {
